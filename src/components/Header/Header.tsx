@@ -42,7 +42,7 @@ export const Header: FC<Props> = () => {
 				</Tabs>
 			</div>
 			<div className={styles.rightBar}>
-
+				
 			</div>
 		</div>
 	</div>
