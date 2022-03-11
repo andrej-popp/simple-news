@@ -17,9 +17,9 @@ const styles = {
 type Props = Article;
 
 export const NewsItem: FC<Props> = (props) => {
-  const { author, title, description, urlToImage } = props;
+  const { author, title, description, urlToImage, url } = props;
 	return <div className={styles.container}>
-    <img src={urlToImage} alt={''} />
+    <img onClick={() => window.open(url, '_blank')} src={urlToImage} alt={''} />
     <h3>{title}</h3>
     <div>{description}</div>
     <div>{author}</div>
