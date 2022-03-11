@@ -1,0 +1,51 @@
+// Some best-practice CSS that's useful for most apps
+// Just remove them if they're not what you want
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-tap-highlight-color: transparent !important;
+    box-sizing: inherit;
+}
+
+a,
+textarea,
+input,
+button {
+&:focus,
+&:active {
+     outline: 0;
+     background-image: none;
+ }
+}
+
+div {
+    box-sizing: border-box;
+&:focus,
+&:active {
+     outline: 0;
+ }
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+input[type='text'],
+textarea,
+input[type='tel'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

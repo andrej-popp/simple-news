@@ -2,10 +2,16 @@
   "name": "simple-news",
   "version": "0.1.0",
   "private": true,
-  "main": "src/index.tsx",
+  "main": "index.tsx",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.22",
+    "@fortawesome/free-regular-svg-icons": "5.10.2",
+    "@fortawesome/free-solid-svg-icons": "5.10.2",
+    "@fortawesome/react-fontawesome": "0.1.4",
+    "antd": "^4.19.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-scripts": "^5.0.0",
     "typestyle": "^2.3.0"
   },
   "devDependencies": {
@@ -18,14 +24,12 @@
     "@types/react-dom": "^17.0.13",
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
-    "typescript": "^4.6.2",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "sass": "^1.49.9",
+    "typescript": "^4.6.2"
   },
   "scripts": {
-    "start": "react start",
-    "build": "react build"
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [
