@@ -41,9 +41,7 @@ export const Header: FC<Props> = () => {
 					<TabPane tab="Для всех остальных" key="2" />
 				</Tabs>
 			</div>
-			<div className={styles.rightBar}>
-				
-			</div>
+			<div className={styles.rightBar} />
 		</div>
 	</div>
 }
