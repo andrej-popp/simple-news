@@ -12,14 +12,13 @@ const styles = {
 type Props = {};
 
 export const NewsList: FC<Props> = () => {
-  const [list, setList] = useState([] as Article[]);
+  const [articles, setArticles] = useState([] as Article[]);
   const [config, setField] = useNewsState();
 
   useEffect(() => {
     const fetch = async () => {
       const { data } = await everything(config as IEverythingRequest);
-      console.log(data);
-      setList(data.articles);
+      setArticles(data.articles);
     }
     fetch();
   }, [ config ]);
@@ -30,6 +29,6 @@ export const NewsList: FC<Props> = () => {
     <Button
       // @ts-ignore
       onClick={() => setField('q', 'russia')}>test</Button>
-    {list.map(n => <NewsItem {...n} />)}
+    {articles.map(n => <NewsItem {...n} />)}
 	</div>
 }

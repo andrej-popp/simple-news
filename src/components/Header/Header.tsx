@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { style } from 'typestyle';
-import { Tabs } from 'antd';
-import gridSvg from "assets/icons/grid.svg";
-const { TabPane } = Tabs;
+import { Button, Tooltip } from 'antd';
+import {
+  UnorderedListOutlined
+} from '@ant-design/icons';
 
 const styles = {
 	header: style({
@@ -14,6 +15,7 @@ const styles = {
 	}),
 	content: style({
 		width: 1200,
+    padding: '0 16px',
 		display: 'flex',
 		justifyContent: 'space-between'
 	}),
@@ -28,14 +30,18 @@ const styles = {
 type Props = {};
 
 export const Header: FC<Props> = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
   return <div className={styles.header}>
 		<div className={styles.content}>
 			<div className={styles.leftBar}>
-				<img src={gridSvg} alt="" />
-        <TabPane tab="Для меня" key="1" />
-        <TabPane tab="Для всех остальных" key="2" />
+        <Tooltip title="search">
+          <Button type="primary" shape="circle" onClick={() => setShowMenu(!showMenu)} icon={<UnorderedListOutlined />} />
+        </Tooltip>
       </div>
-			<div className={styles.rightBar} />
+      <div className={styles.rightBar}>
+
+      </div>
 		</div>
 	</div>
 }
