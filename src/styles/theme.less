@@ -1,0 +1,71 @@
+@import './antdOverrides';
+
+@border: @border-width-base @border-style-base @border-color-split;
+
+.ant-pagination.ant-table-pagination.mini {
+  display: flex;
+  overflow: hidden;
+
+  & > * {
+    &:first-child,
+    &:last-child {
+      white-space: nowrap;
+    }
+  }
+}
+
+.ant-table-scroll {
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+  }
+}
+
+.ant-table-title {
+  background-color: @component-background;
+}
+
+.ant-table-header {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  overflow-x: hidden !important;
+}
+
+.ant-form-vertical {
+  .ant-form-item {
+    padding-bottom: 0;
+    margin-bottom: @padding-md;
+  }
+  .ant-form-item-with-help {
+    margin-bottom: 0;
+  }
+  .ant-form-explain {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: @padding-md;
+  }
+  .ant-form-item-label {
+    padding: 0 0 2px;
+  }
+}
+
+.ant-form-item-label {
+  line-height: unset;
+}
+
+.ant-select {
+  display: block;
+
+  &.ant-select-disabled {
+    .ant-select-selection {
+      user-select: initial;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .ant-modal {
+    max-width: calc(100% - @padding-xs * 2);
+  }
+}
