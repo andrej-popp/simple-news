@@ -9,6 +9,10 @@ export const useNewsState = () => {
     apiKey,
   });
 
-  return [config , setConfig];
+  const setField = (field, value) => {
+    const resConfig = {...config, ...{[field]: value} };
+    setConfig(resConfig)
+  }
 
+  return [config , setField];
 }
